@@ -74,7 +74,7 @@ button[data-start]:disabled {
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: 48px; /* 120% */
+  line-height: 48px;
   letter-spacing: 1.6px;
 }
 
@@ -84,5 +84,5 @@ button[data-start]:disabled {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
