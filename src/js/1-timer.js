@@ -7,7 +7,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 // icon
-import iconError from '../img/error-icon.svg';
+import iconError from './img/error-icon.svg';
 
 const dateInput = document.querySelector('#datetime-picker');
 const startBtn = document.querySelector('button[data-start]');
