@@ -37,7 +37,7 @@ const options = {
         position: 'topCenter',
         messageLineHeight: '24px',
         messageSize: '16px',
-        iconUrl: './img/error-icon.svg',
+        iconUrl: '../img/error-icon.svg',
         theme: 'dark',
       });
     } else {
