@@ -34,6 +34,7 @@ form.addEventListener('submit', e => {
         backgroundColor: '#59A10D',
         iconUrl: '../img/snackbar-success-icon.svg',
         theme: 'dark',
+        transitionIn: 'fadeIn,',
       });
     })
     .catch(error => {
@@ -49,6 +50,7 @@ form.addEventListener('submit', e => {
         position: 'topCenter',
         messageSize: '16px',
         iconUrl: '../img/error-icon.svg',
+        transitionIn: 'fadeIn,',
         theme: 'dark',
       });
     });
