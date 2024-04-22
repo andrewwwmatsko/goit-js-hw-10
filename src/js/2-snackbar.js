@@ -1,6 +1,9 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+import iconSuccess from '../img/snackbar-success-icon.svg';
+import iconError from '../img/error-icon.svg';
+
 const form = document.querySelector('.form');
 const submitBtn = form.querySelector('button[type=submit]');
 const delayInput = form.querySelector('input[name=delay]');
@@ -32,7 +35,7 @@ form.addEventListener('submit', e => {
         messageLineHeight: '24px',
         messageSize: '16px',
         backgroundColor: '#59A10D',
-        iconUrl: '../img/snackbar-success-icon.svg',
+        iconUrl: iconSuccess,
         theme: 'dark',
         transitionIn: 'fadeIn,',
       });
@@ -49,7 +52,7 @@ form.addEventListener('submit', e => {
         backgroundColor: '#EF4040',
         position: 'topCenter',
         messageSize: '16px',
-        iconUrl: '../img/error-icon.svg',
+        iconUrl: iconError,
         transitionIn: 'fadeIn,',
         theme: 'dark',
       });

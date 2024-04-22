@@ -6,6 +6,9 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+// icon
+import iconError from '../img/error-icon.svg';
+
 const dateInput = document.querySelector('#datetime-picker');
 const startBtn = document.querySelector('button[data-start]');
 
@@ -37,7 +40,7 @@ const options = {
         position: 'topCenter',
         messageLineHeight: '24px',
         messageSize: '16px',
-        iconUrl: '../img/error-icon.svg',
+        iconUrl: iconError,
         theme: 'dark',
       });
     } else {
