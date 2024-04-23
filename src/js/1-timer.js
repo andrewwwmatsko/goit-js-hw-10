@@ -22,7 +22,7 @@ const secondsDOM = document.querySelector('[data-seconds]');
 let userSelectedDate;
 let timerId = 0;
 let counter = 1000;
-const dateNow = new Date();
+let currentDate;
 
 const options = {
   enableTime: true,
@@ -30,6 +30,8 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
+    const dateNow = new Date();
+    currentDate = dateNow;
     if (selectedDates[0] < dateNow) {
       iziToast.show({
         title: 'Error',
@@ -82,12 +84,13 @@ function startTimer() {
   dateInput.setAttribute('disabled', true);
 
   timerId = setInterval(() => {
-    let timeLeft = userSelectedDate.getTime() - dateNow.getTime() - counter;
+    let timeLeft = userSelectedDate.getTime() - currentDate.getTime() - counter;
 
     counter += 1000;
 
-    if (timeLeft < 1000) {
+    if (timeLeft < 0) {
       clearInterval(timerId);
+      return;
     }
 
     const { days, hours, minutes, seconds } = convertMs(timeLeft);
