@@ -17,7 +17,7 @@ form.addEventListener('submit', e => {
   //     shouldResolve: form.querySelector('input[type = radio]:checked').value,
   //   };
 
-  const { delay, state } = e.currentTarget;
+  const { delay, state } = e.currentTarget.elements;
 
   let delayInput = delay.value;
   let shouldResolve = state.value;
